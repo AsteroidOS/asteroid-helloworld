@@ -26,7 +26,7 @@ Application {
     outerColor: "#421c0a"
 
     Label {
-        id: bpmText
+        id: hello
         anchors.centerIn: parent
         horizontalAlignment: Text.AlignHCenter
         text: "Hello World!"
