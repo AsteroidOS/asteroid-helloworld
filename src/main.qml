@@ -16,7 +16,6 @@
  */
 
 import QtQuick 2.9
-import QtSensors 5.11
 import org.asteroid.controls 1.0
 
 Application {

@@ -15,8 +15,6 @@ include(ECMQMLModules)
 include(AsteroidCMakeSettings)
 include(AsteroidTranslations)
 
-ecm_find_qmlmodule(QtSensors 5.11)
-
 add_subdirectory(src)
 
 generate_desktop(${CMAKE_SOURCE_DIR} asteroid-helloworld)
