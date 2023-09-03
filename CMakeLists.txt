@@ -28,6 +28,7 @@ generate_desktop(${CMAKE_SOURCE_DIR} asteroid-helloworld)
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
+set(CMAKE_INSTALL_SO_NO_EXE 0 CACHE INTERNAL "Install .so files with execute permission.")
 set(CPACK_GENERATOR "DEB")
 string(TOLOWER "${CMAKE_PROJECT_NAME}" lcproject_name)
 set(CPACK_DEBIAN_FILE_NAME "${lcproject_name}-${CMAKE_PROJECT_VERSION}.ipk")
