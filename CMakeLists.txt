@@ -17,14 +17,14 @@ include(AsteroidTranslations)
 
 add_subdirectory(src)
 
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/asteroid-helloworld.in
-	${CMAKE_BINARY_DIR}/asteroid-helloworld
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/runscript.in
+	${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}
 	@ONLY)
 
-install(PROGRAMS ${CMAKE_BINARY_DIR}/asteroid-helloworld
+install(PROGRAMS ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}
 	DESTINATION ${CMAKE_INSTALL_BINDIR})
 
-generate_desktop(${CMAKE_SOURCE_DIR} asteroid-helloworld)
+generate_desktop(${CMAKE_SOURCE_DIR} ${CMAKE_PROJECT_NAME})
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
