@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(asteroid-helloworld
+project(
+	asteroid-helloworld
 	VERSION 2.1.0
-	DESCRIPTION "Sample application to get started on Asteroid")
+	DESCRIPTION "Sample application to get started on Asteroid"
+)
 
 find_package(ECM REQUIRED NO_MODULE)
 find_package(AsteroidApp REQUIRED)
@@ -17,12 +19,16 @@ include(AsteroidTranslations)
 
 add_subdirectory(src)
 
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/runscript.in
+configure_file(
+	${CMAKE_CURRENT_SOURCE_DIR}/runscript.in
 	${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}
-	@ONLY)
+	@ONLY
+)
 
-install(PROGRAMS ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}
-	DESTINATION ${CMAKE_INSTALL_BINDIR})
+install(
+	PROGRAMS ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}
+	DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
 
 generate_desktop(${CMAKE_SOURCE_DIR} ${CMAKE_PROJECT_NAME})
 
