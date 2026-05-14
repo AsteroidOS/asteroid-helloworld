@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 
 project(asteroid-helloworld
-	VERSION 0.0.1
+	VERSION 2.1.0
 	DESCRIPTION "Sample application to get started on Asteroid")
 
 find_package(ECM REQUIRED NO_MODULE)
