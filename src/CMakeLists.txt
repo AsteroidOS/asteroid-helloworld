@@ -1,4 +1,8 @@
-add_library(${CMAKE_PROJECT_NAME} main.cpp resources.qrc)
+add_library(${CMAKE_PROJECT_NAME} main.cpp)
+
+asteroid_app_qml_module(${CMAKE_PROJECT_NAME}
+	main.qml
+)
 
 target_link_libraries(
 	${CMAKE_PROJECT_NAME}
